@@ -68,15 +68,15 @@ nav a{
     text-decoration: none;
  
 }
-.beer a:link{
+.beers .beer a:link{
     color:black;
 }
-.beer h1{
+.beers .beer h1{
     text-align: left;
     margin:0 0 10px 0;
     font-weight: bold;
 }
-.beer{
+.beers .beer{
     width: 450px;
     display: flex;
     flex-direction: column;
@@ -103,18 +103,48 @@ nav a{
 }
 .random-beer img{
   
-    width: 100px;
-    
+    width: 100px;    
    
 }
-.beer-img{
-    width:200px;
-    display :flex;
+
+
+
+.single-beer{
+    display: flex;
+    flex-direction: row;
     flex-wrap: wrap;
+    justify-content:center;
+    align-items: center;
+    margin-top: 50px;
+    width:600px;
+    margin: 50px auto;
+  
+    
+}
+.single-beer img{
+    width: 80px;
+    margin-right: 100px;
+
 }
 
 
-
-.info-beer-diff{
-    margin-left:150px
+.single-beer .info-beer-diff{
+    width:400px;
+    margin-left: 210px;
+}
+.info-beer-diff li{
+padding-left: 35px;
+}
+.single-beer .info-beer{
+    width: 60%;
+}
+.single-beer .info-beer h3{
+   color:#bfbfbf;
+}
+.single-beer a:link{
+    color:black;
+}
+.single-beer a{
+    color:black;
+    text-decoration: none;
 }

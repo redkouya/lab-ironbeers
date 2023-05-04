@@ -1,6 +1,7 @@
-<div class="beers">
-  <div class="random-beer">
+<div class="single-beer">
+  
  {{>beerpartial this.randomBeer}}
+ <div class="other-info">
   <div class="info-beer-diff">
   <h3>Food Pairing</h3>
   {{#each this.randomBeer.food_pairing}}
@@ -11,4 +12,5 @@
   </div>
   </div>
   </div>
-</div>
+
+  

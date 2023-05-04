@@ -27,7 +27,7 @@ async function getBeersAsync(response) {
   try {
     const beerArr = await punkAPI.getBeers();
     console.log('beerArr', beerArr);
-    response.render('beers', { beerArr });
+    response.render('beers', { beerArr ,diffInfo:true});
   } catch (error) {
     console.log(error);
   }
@@ -40,7 +40,7 @@ app.get('/beers/beer/:id', (req, res) => {
  
   punkAPI.getBeer(req.params.id).then((response)=>{
     console.log('response',response);
-      res.render('random-beer', { randomBeer: response[0] }); // reuso el de random beer
+      res.render('random-beer', { randomBeer: response[0],diffInfo:false }); // reuso el de random beer
     
   });
 });
@@ -51,7 +51,7 @@ app.get('/random-beer', (req, res) => {
     .then(response => {
       //este metodo devuelve un array
       console.log(response, 'response');
-      res.render('random-beer', { randomBeer: response[0] });
+      res.render('random-beer', { randomBeer: response[0],diffInfo:true });
     })
     .catch(error => {
       console.log(error);
